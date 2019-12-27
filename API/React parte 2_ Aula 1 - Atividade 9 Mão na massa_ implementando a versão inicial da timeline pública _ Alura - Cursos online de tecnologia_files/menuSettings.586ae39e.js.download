@@ -1,0 +1,1 @@
+$(".settings-button").on("click",function(t){t.stopPropagation(),$(this).toggleClass("settings-button--active")}),$("html").click(function(){$(".settings-button").removeClass("settings-button--active")});

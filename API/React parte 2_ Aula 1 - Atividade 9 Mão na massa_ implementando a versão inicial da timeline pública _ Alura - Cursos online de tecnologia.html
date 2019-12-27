@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://cursos.alura.com.br/course/react-parte-2/task/24451 -->
+<html lang="pt-BR" data-product="alura"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+		
+
+
+
+
+<!-- Google Tag Manager -->
+<script async="" src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/analytics.js.download"></script><script async="" id="cio-tracker" data-site-id="fccd7e3d49531457b6b2" src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/track.js.download"></script><script type="text/javascript" async="" src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/analytics.js.download"></script><script async="" src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/gtm.js.download"></script><script>
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer', 'GTM-TN542JN');
+</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+	<script type="text/javascript">
+        dataLayer.push({
+            'tipoPagina': 'Aula',
+            'curso': 'React parte 2: Container components e o ciclo de vida do react'
+        });
+	</script>
+
+	
+
+	<title>React parte 2: Aula 1 - Atividade 9 Mão na massa: implementando a versão inicial da timeline pública | Alura - Cursos online de tecnologia</title>
+	
+	<link rel="shortcut icon" href="https://cursos.alura.com.br/images/alura/favicon.ico">
+	
+	<link href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/video-js.b6d0b8ea.css">
+    <link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/silvermine-videojs-quality-selector.min.de928d55.css">
+    <link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/prettify.4f36b4ca.css">
+
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/base.1e88adda.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/formattedText.afb4622e.css">
+	
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/container.532971f7.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/classPage.982c18c7.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/menuSettings.c59fc6bb.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/taskProgress.6f863249.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/taskMessageInfo.4becb946.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/alternativeList.ba7ea685.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/taskFeedback.1c82537d.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/markdown.c1e23fdd.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/finishSection.7e40d196.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/phrase.d61af0f3.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/hqexplanation.3ed41021.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/openquestion.811813bb.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/textcontent.7298b79f.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/video.b284173d.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/singlechoice.4a8caf68.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/music.c02947a9.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/multiplechoice.70f60e4c.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/videodialog.7d2041b8.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/fillintheblank.81cde842.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/speakingpractice.5068bb32.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/pronunciationpractice.7d2876f7.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/repetition.e9ba636b.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/genericVideo.9239c799.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/projectSubmit.cd21d24b.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/extraContentTask.b2d126e6.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/taskContent.1ef47209.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/taskButtons.1c232b93.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/markdownEditor.4bc2327a.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/audioPlayer.10639204.css">
+	<link rel="stylesheet" href="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/dark-mode.a699f4de.css">
+
+	
+
+	<style type="text/css">
+		.task:before, .video-js .vjs-play-progress {
+			background-color: #2A7AE4;
+		}
+	</style>
+
+	
+	
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/sha256.min.js.download"></script></head>
+<body>
+
+
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TN542JN"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<section class="task menu--inactive" data-allow-answer="true" data-task-section-exam="false" data-task-type="textcontent" data-task-id="24451" data-author-id="304783" data-course-code="react-parte-2" data-section-name="Implementação da primeira versão da timeline do instalura" data-section-id="4715" data-section-number="1" data-domain="cursos.alura.com.br" data-hasfeedbackanswer="false" data-url-prefix="/">
+	
+	<section class="task-body">
+		
+		<header class="task-body-header">
+			<div class="container">
+				<h1 class="task-body-header-title">
+					<svg class="task-body-header-title-svg" aria-label="Atividade de Atividade sem Resposta do Aluno">
+						<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#TEXT_CONTENT"></use>
+					</svg>
+					<small>09</small>
+					<span class="task-body-header-title-text"> Mão na massa: implementando a versão inicial da timeline pública</span>
+				</h1>
+				
+					<div class="task-body-header-actions">
+						<a href="https://cursos.alura.com.br/course/react-parte-2/task/24451/next" aria-hidden="true" class="task-actions-button task-actions-button-next task-submit">Próxima Atividade</a>
+					</div>
+				
+			</div>
+		</header>
+		<main class="task-body-main" data-should-warn="false">
+			
+
+
+
+
+
+
+
+	
+	
+	
+		
+
+
+
+
+<section id="task-content" class="textContent">
+	
+	<div class="container">
+		
+
+
+
+
+<div class="settings">
+	<button type="button" class="settings-button" aria-label="Configurações">
+		<svg class="settings-button-icon">
+			<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#MENU_SETTINGS"></use>
+		</svg>
+	</button>
+	<div class="settings-box">
+		<span class="settings-box-title"></span>
+		<ul class="settings-box-list">
+			
+				<li class="settings-box-item settings-box-item-darkmode">
+					<button class="dark-mode-action">
+							Modo noturno
+					</button>
+				</li>
+			
+			
+				
+				
+				
+				
+					<li class="settings-box-item settings-box-item-player"><a class="settings-box-item-player--disabled" onclick="event.preventDefault();">Mudar o player</a></li>
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="https://cursos.alura.com.br/suggestions/new/react-parte-2/24451/question">Sugerir alteração</a></li>
+					
+				
+			
+			
+		</ul>
+	</div>
+</div>
+		<div class="formattedText" data-external-links="">
+			<h1>Download do projeto até este ponto do curso</h1>
+<p>Você pode baixar o código fonte do projeto, basta seguir o este <a href="https://github.com/alberto-alura/projeto-instalura-curso/releases/tag/aula1" rel="nofollow noopener" target="_blank">link</a></p>
+<h1>Download do layout fornecido pelo designer</h1>
+<p>Um profissional especializado em HTML e CSS chamado Natan preparou o layout da single page application do <code>instalura</code>. O  HTML, CSS e as imagens disponibilizadas pelo designer podem ser obtidos <a href="https://www.dropbox.com/s/g0ia65tbhjx714n/instalura.zip?dl=0" rel="nofollow noopener" target="_blank">aqui</a></p>
+<h1>Criando seu projeto</h1>
+<p>Acesse a pasta que você tem instalado o <strong>create-react-app</strong> e crie o projeto com o seguinte comando:</p>
+<p><code>./node_modules/.bin/create-react-app instalura</code>. </p>
+<p>Se você tiver instlado ele globalmente, basta executar <code>create-react-app instalura</code>. Lembre que você já deve ter o <strong>create-react-app</strong> instalado, por conta do primeiro curso. Acesse <a href="https://cursos.alura.com.br/admin/course/479/section/4364/task/edit/20543" rel="nofollow">https://cursos.alura.com.br/admin/course/479/section/4364/task/edit/20543</a> para relembrar o processo de instalação, caso seja necessário. </p>
+<p>Para os usuários do windows, aqui estão os passos:</p>
+<ul><li>O create-react-app está instalado local? Então, para criar o projeto, execute assim: node node_modules/.bin/create-react-app instalura</li><li>Está no Windows e instalou global? Então, para criar o projeto, execute assim: create-react-app instalura</li></ul>
+<h2>Observação importante</h2>
+<p>Caso você opte por instalar uma versão mais nova do create-react-app e, consequentemente uma versão mais nova do react, pode ser que apareça uma mensagem de warning no seu projeto.</p>
+<pre class="prettyprint"><code><span class="typ">Warning</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Accessing</span><span class="pln"> </span><span class="typ">PropTypes</span><span class="pln"> via the main </span><span class="typ">React</span><span class="pln"> </span><span class="kwd">package</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> deprecated</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Use</span><span class="pln"> the prop</span><span class="pun">-</span><span class="pln">types </span><span class="kwd">package</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> npm instead</span><span class="pun">.</span><span class="pln">
+</span><span class="typ">Warning</span><span class="pun">:</span><span class="pln"> </span><span class="typ">RouterContext</span><span class="pun">:</span><span class="pln"> </span><span class="typ">React</span><span class="pun">.</span><span class="pln">createClass </span><span class="kwd">is</span><span class="pln"> deprecated </span><span class="kwd">and</span><span class="pln"> will be removed </span><span class="kwd">in</span><span class="pln"> version </span><span class="lit">16.</span><span class="pln"> </span><span class="typ">Use</span><span class="pln"> plain </span><span class="typ">JavaScript</span><span class="pln"> classes instead</span><span class="pun">.</span><span class="pln"> </span><span class="typ">If</span><span class="pln"> you</span><span class="str">'re not yet ready to migrate, create-react-class is available on npm as a drop-in replacement.</span></code></pre><p>Fique tranquilo, essa mensagem está dentro do react e não atrapalha o seu desenvolvimento.</p>
+<h1>Subindo a API localmente</h1>
+<p>Você pode baixar o arquivo jar da API neste link: <a href="https://github.com/alberto-alura/instalura-api/raw/master/instalura.jar" rel="nofollow noopener" target="_blank">https://github.com/alberto-alura/instalura-api/raw/master/instalura.jar</a></p>
+<p>Antes de começarmos a implementar nosso código do Instalura, já vamos deixar a API rodando. Abra um terminal e navegue até a pasta onde você realizou o download do jar. A partir dessa pasta, execute o seguindo comando:</p>
+<p><code>java -jar instalura.jar</code>.</p>
+<p>Se o seu banco tiver uma senha diferente de vazio, rode o comando conforme explicado abaixo.</p>
+<p><code>java -jar -Dspring.datasource.password=suaSenhaAqui instalura.jar</code></p>
+<blockquote>
+<p>Caso tenha problemas com a API local, você pode testar a mesma API disponível em um servidor externo pelo endereço: <a href="https://instalura-api.herokuapp.com/api/public/fotos/rafael" rel="nofollow noopener" target="_blank">https://instalura-api.herokuapp.com/api/public/fotos/rafael</a>. Esse é um dos endpoints disponíveis, vamos descobrir os outros no decorrer do curso. </p>
+</blockquote>
+<h1>Gerando os dados para que possamos trabalhar na aplicação.</h1>
+<p>Acesse o endereço <a href="http://localhost:8080/gera/dados" rel="nofollow noopener" target="_blank">http://localhost:8080/gera/dados</a> para que a aplicação possa salvar os dados necessários para utilizarmos no Instalura. </p>
+<p>São gerados os seguintes usuários e suas senhas:</p>
+<ul><li>usuário = alots, senha = 123456;</li><li>usuário = rafael, senha = 123456;</li><li>usuário = vitor, senha = 123456</li></ul>
+<p>Você pode usar qualquer um desses para logar, quando for necessário, na aplicação.</p>
+<h1>Importação do css e das imagens</h1>
+<p>Precisamos importar o css e as imagens que vamos usar no projeto. Para adiantar, já crie duas pastas dentro de <strong>src</strong>, a <strong>css</strong> e a <strong>imgs</strong>. Agora vamos importar os arquivos em si.</p>
+<ul><li>Crie o arquivo <strong>reset.css</strong> na pasta <strong>src/css</strong> e cole o conteúdo do link <a href="https://raw.githubusercontent.com/alberto-alura/projeto-instalura-curso/master/src/css/reset.css" rel="nofollow noopener" target="_blank">https://raw.githubusercontent.com/alberto-alura/projeto-instalura-curso/master/src/css/reset.css</a></li><li>Crie o arquivo <strong>timeline.css</strong> na pasta <strong>src/css</strong> e cole o conteúdo do link <a href="https://raw.githubusercontent.com/alberto-alura/projeto-instalura-curso/master/src/css/timeline.css" rel="nofollow noopener" target="_blank">https://raw.githubusercontent.com/alberto-alura/projeto-instalura-curso/master/src/css/timeline.css</a></li><li>Crie o arquivo <strong>login.css</strong> na pasta <strong>src/css</strong> e cole o conteúdo do link <a href="https://raw.githubusercontent.com/alberto-alura/projeto-instalura-curso/master/src/css/login.css" rel="nofollow noopener" target="_blank">https://raw.githubusercontent.com/alberto-alura/projeto-instalura-curso/master/src/css/login.css</a> (esse daqui só vai ser usado mais para frente, mas não tem motivo para fazermos o passo de novo)</li></ul>
+<h1>Implementação dos componentes relativos ao layout que recebemos</h1>
+<h2>Componente Header</h2>
+<p>O primeiro passo é criar a pasta <strong>componentes</strong> dentro da pasta <strong>src</strong>. Com isso feito, vamos ao componente em si. Crie o arquivo <strong>Header.js</strong> dentro da pasta <strong>src/componentes</strong>. </p>
+<pre class="prettyprint"><code><span class="kwd">import</span><span class="pln"> </span><span class="typ">React</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'react'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">export</span><span class="pln"> </span><span class="kwd">default</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Header</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    render</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+        </span><span class="pun">&lt;</span><span class="pln">header className</span><span class="pun">=</span><span class="str">"header container"</span><span class="pun">&gt;</span><span class="pln">
+          </span><span class="pun">&lt;</span><span class="pln">h1 className</span><span class="pun">=</span><span class="str">"header-logo"</span><span class="pun">&gt;</span><span class="pln">
+            </span><span class="typ">Instalura</span><span class="pln">
+          </span><span class="pun">&lt;</span><span class="str">/h1&gt;
+
+          &lt;form className="header-busca"&gt;
+            &lt;input type="text" name="search" placeholder="Pesquisa" className="header-busca-campo"/</span><span class="pun">&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">input type</span><span class="pun">=</span><span class="str">"submit"</span><span class="pln"> value</span><span class="pun">=</span><span class="str">"Buscar"</span><span class="pln"> className</span><span class="pun">=</span><span class="str">"header-busca-submit"</span><span class="pun">/&gt;</span><span class="pln">
+          </span><span class="pun">&lt;</span><span class="str">/form&gt;
+
+
+          &lt;nav&gt;
+            &lt;ul className="header-nav"&gt;
+              &lt;li className="header-nav-item"&gt;
+                &lt;a href="#"&gt;
+                  ♡
+                  {/</span><span class="pun">*</span><span class="pln">                 </span><span class="pun">♥</span><span class="pln"> </span><span class="pun">*</span><span class="str">/}
+                  {/</span><span class="pun">*</span><span class="pln"> </span><span class="typ">Quem</span><span class="pln"> deu like nas minhas fotos </span><span class="pun">*</span><span class="str">/}
+                &lt;/</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">
+              </span><span class="pun">&lt;</span><span class="str">/li&gt;
+            &lt;/</span><span class="pln">ul</span><span class="pun">&gt;</span><span class="pln">
+          </span><span class="pun">&lt;</span><span class="str">/nav&gt;
+        &lt;/</span><span class="pln">header</span><span class="pun">&gt;</span><span class="pln">            
+        </span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><h2>Componentes relativos as Fotos</h2>
+<p>Agora vamos implementar a primeira versão dos nossos componentes que compõem cada foto da Timeline. Crie o arquivo <strong>FotoItem.js</strong> na pasta <strong>src/componentes</strong>.</p>
+<pre class="prettyprint"><code><span class="kwd">import</span><span class="pln"> </span><span class="typ">React</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'react'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">FotoAtualizacoes</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    render</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">section className</span><span class="pun">=</span><span class="str">"fotoAtualizacoes"</span><span class="pun">&gt;</span><span class="pln">
+              </span><span class="pun">&lt;</span><span class="pln">a href</span><span class="pun">=</span><span class="str">"#"</span><span class="pln"> className</span><span class="pun">=</span><span class="str">"fotoAtualizacoes-like"</span><span class="pun">&gt;</span><span class="typ">Likar</span><span class="pun">&lt;</span><span class="str">/a&gt;
+              &lt;form className="fotoAtualizacoes-form"&gt;
+                &lt;input type="text" placeholder="Adicione um comentário..." className="fotoAtualizacoes-form-campo"/</span><span class="pun">&gt;</span><span class="pln">
+                </span><span class="pun">&lt;</span><span class="pln">input type</span><span class="pun">=</span><span class="str">"submit"</span><span class="pln"> value</span><span class="pun">=</span><span class="str">"Comentar!"</span><span class="pln"> className</span><span class="pun">=</span><span class="str">"fotoAtualizacoes-form-submit"</span><span class="pun">/&gt;</span><span class="pln">
+              </span><span class="pun">&lt;</span><span class="str">/form&gt;
+
+            &lt;/</span><span class="pln">section</span><span class="pun">&gt;</span><span class="pln">            
+        </span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">FotoInfo</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    render</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">div className</span><span class="pun">=</span><span class="str">"foto-info"</span><span class="pun">&gt;</span><span class="pln">
+              </span><span class="pun">&lt;</span><span class="pln">div className</span><span class="pun">=</span><span class="str">"foto-info-likes"</span><span class="pun">&gt;</span><span class="pln">
+
+                </span><span class="pun">&lt;</span><span class="pln">a href</span><span class="pun">=</span><span class="str">"#"</span><span class="pun">&gt;</span><span class="pln">
+                  alots_ssa
+                </span><span class="pun">&lt;</span><span class="str">/a&gt;
+
+                ,
+
+                &lt;a href="#"&gt;
+                  rafael_rollo
+                &lt;/</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln"> 
+
+                 curtiram
+
+              </span><span class="pun">&lt;</span><span class="str">/div&gt;
+
+              &lt;p className="foto-info-legenda"&gt;
+                &lt;a className="foto-info-autor"&gt;autor &lt;/</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">
+                </span><span class="typ">Lorem</span><span class="pln"> ipsum dolor sit amet</span><span class="pun">,</span><span class="pln"> consectetur adipisicing elit</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Est</span><span class="pun">,</span><span class="pln"> illo</span><span class="pun">?</span><span class="pln">
+              </span><span class="pun">&lt;</span><span class="str">/p&gt;
+
+              &lt;ul className="foto-info-comentarios"&gt;
+                &lt;li className="comentario"&gt;
+                  &lt;a className="foto-info-autor"&gt;seguidor &lt;/</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">
+                  </span><span class="typ">Lorem</span><span class="pln"> ipsum dolor sit amet</span><span class="pun">,</span><span class="pln"> consectetur adipisicing elit</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Quidem</span><span class="pln"> ad</span><span class="pun">,</span><span class="pln"> molestiae</span><span class="pun">.</span><span class="pln">
+                </span><span class="pun">&lt;</span><span class="str">/li&gt;
+                &lt;li className="comentario"&gt;
+                  &lt;a className="foto-info-autor"&gt;seguidor &lt;/</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">
+                  </span><span class="typ">Lorem</span><span class="pln"> ipsum dolor sit amet</span><span class="pun">,</span><span class="pln"> consectetur adipisicing elit</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Sunt</span><span class="pln"> cumque earum molestias voluptatem modi nihil sit magnam ratione eveniet distinctio magni error asperiores dignissimos tempora expedita</span><span class="pun">,</span><span class="pln"> laborum ex soluta hic maiores veritatis deserunt</span><span class="pun">.</span><span class="pln">
+                </span><span class="pun">&lt;</span><span class="str">/li&gt;
+                &lt;li className="comentario"&gt;
+                  &lt;a className="foto-info-autor"&gt;seguidor &lt;/</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">
+                  </span><span class="typ">Lorem</span><span class="pln"> ipsum dolor sit amet</span><span class="pun">,</span><span class="pln"> consectetur adipisicing elit</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Ipsum</span><span class="pln"> laudantium quae ab fuga odio delectus maiores voluptatibus sit commodi quidem</span><span class="pun">.</span><span class="pln">
+                </span><span class="pun">&lt;</span><span class="str">/li&gt;
+              &lt;/</span><span class="pln">ul</span><span class="pun">&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="str">/div&gt;            
+        );
+    }
+}
+
+class FotoHeader extends Component {
+    render(){
+        return (
+            &lt;header className="foto-header"&gt;
+              &lt;figure className="foto-usuario"&gt;
+                &lt;img src="https:/</span><span class="pun">/</span><span class="pln">instagram</span><span class="pun">.</span><span class="pln">fcgh10</span><span class="pun">-</span><span class="lit">1.fna</span><span class="pun">.</span><span class="pln">fbcdn</span><span class="pun">.</span><span class="pln">net</span><span class="pun">/</span><span class="pln">t51</span><span class="pun">.</span><span class="lit">2885</span><span class="pun">-</span><span class="lit">19</span><span class="pun">/</span><span class="lit">11199408</span><span class="pln">_569104449895751_1837574990_a</span><span class="pun">.</span><span class="pln">jpg</span><span class="str">" alt="</span><span class="pln">foto </span><span class="kwd">do</span><span class="pln"> usuario</span><span class="str">"/&gt;
+                &lt;figcaption className="</span><span class="pln">foto</span><span class="pun">-</span><span class="pln">usuario</span><span class="str">"&gt;
+                  &lt;a href="</span><span class="com">#"&gt;</span><span class="pln">
+                    alots
+                  </span><span class="pun">&lt;</span><span class="str">/a&gt;  
+                &lt;/</span><span class="pln">figcaption</span><span class="pun">&gt;</span><span class="pln">
+              </span><span class="pun">&lt;</span><span class="str">/figure&gt;
+              &lt;time className="foto-data"&gt;03/</span><span class="lit">10</span><span class="pun">/</span><span class="lit">2016</span><span class="pln"> </span><span class="lit">20</span><span class="pun">:</span><span class="lit">13</span><span class="pun">&lt;</span><span class="str">/time&gt;
+            &lt;/</span><span class="pln">header</span><span class="pun">&gt;</span><span class="pln">            
+        </span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">export</span><span class="pln"> </span><span class="kwd">default</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">FotoItem</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    render</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+          </span><span class="pun">&lt;</span><span class="pln">div className</span><span class="pun">=</span><span class="str">"foto"</span><span class="pun">&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="typ">FotoHeader</span><span class="pun">/&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">img alt</span><span class="pun">=</span><span class="str">"foto"</span><span class="pln"> className</span><span class="pun">=</span><span class="str">"foto-src"</span><span class="pln"> src</span><span class="pun">=</span><span class="str">"https://instagram.fcgh10-1.fna.fbcdn.net/t51.2885-15/e35/14482111_1635089460122802_8984023070045896704_n.jpg?ig_cache_key=MTM1MzEzNjM4NzAxMjIwODUyMw%3D%3D.2"</span><span class="pun">/&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="typ">FotoInfo</span><span class="pun">/&gt;</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="typ">FotoAtualizacoes</span><span class="pun">/&gt;</span><span class="pln">
+          </span><span class="pun">&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span><span class="pln">            
+        </span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><h2>Implementação da Timeline</h2>
+<p>Agora crie o arquivo <strong>Timeline.js</strong> na pasta <strong>src/componentes</strong>. Nele vamos referenciar os outros componentes da nossa timeline, para poder montar a lista de fotos em função do retorno da consulta da nossa API.</p>
+<pre class="prettyprint"><code><span class="kwd">import</span><span class="pln"> </span><span class="typ">React</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'react'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="typ">FotoItem</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'./FotoItem'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">export</span><span class="pln"> </span><span class="kwd">default</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Timeline</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    render</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+        </span><span class="pun">&lt;</span><span class="pln">div className</span><span class="pun">=</span><span class="str">"fotos container"</span><span class="pun">&gt;</span><span class="pln">
+          </span><span class="pun">&lt;</span><span class="typ">FotoItem</span><span class="pun">/&gt;</span><span class="pln">
+          </span><span class="pun">&lt;</span><span class="typ">FotoItem</span><span class="pun">/&gt;</span><span class="pln">
+        </span><span class="pun">&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span><span class="pln">            
+        </span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>Agora altere o conteúdo do arquivo <strong>src/App.js</strong> para ficar igual ao exemplo abaixo.</p>
+<pre class="prettyprint"><code><span class="kwd">import</span><span class="pln"> </span><span class="typ">React</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'react'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="typ">Header</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'./componentes/Header'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="typ">Timeline</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="str">'./componentes/Timeline'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">App</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Component</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  render</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+    </span><span class="pun">&lt;</span><span class="pln">div id</span><span class="pun">=</span><span class="str">"root"</span><span class="pun">&gt;</span><span class="pln">
+      </span><span class="pun">&lt;</span><span class="pln">div className</span><span class="pun">=</span><span class="str">"main"</span><span class="pun">&gt;</span><span class="pln">
+        </span><span class="pun">&lt;</span><span class="typ">Header</span><span class="pun">/&gt;</span><span class="pln">
+        </span><span class="pun">&lt;</span><span class="typ">Timeline</span><span class="pun">/&gt;</span><span class="pln">
+      </span><span class="pun">&lt;</span><span class="str">/div&gt;
+    &lt;/</span><span class="pln">div</span><span class="pun">&gt;</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">export</span><span class="pln"> </span><span class="kwd">default</span><span class="pln"> </span><span class="typ">App</span><span class="pun">;</span></code></pre><h1>Acesse para fazer o teste</h1>
+<p>Agora que fizemos a implementação inicial, execute o comando <code>npm start</code> e acesse o endereço <a href="http://localhost:3000/timeline" rel="nofollow noopener" target="_blank">http://localhost:3000/timeline</a> para verificar se está tudo funcionando.</p>
+
+		</div>
+		<div class="task-actions">
+			
+
+
+
+
+    <a href="https://cursos.alura.com.br/forum/curso-react-parte-2/exercicio-mao-na-massa-implementando-a-versao-inicial-da-timeline-publica/24451/novo" class=" task-actions-button task-actions-button-forum">Discutir no Forum</a>
+
+			
+				
+					<button class="task-actions-button task-actions-button-answer task-body-actions-button task-actions-button-showOpinion">Ver opinião do instrutor</button>
+				
+				
+			
+		</div>
+		
+			
+
+
+
+
+<section id="task-feedback" class="task-feedback" aria-hidden="true">
+	<section class="task-feedback-banner">
+		<div class="container">
+			<h3 class="task-feedback-banner-title">
+				Opinião do instrutor
+			</h3>
+		</div>
+		
+
+
+
+
+<div class="settings">
+	<button type="button" class="settings-button" aria-label="Configurações">
+		<svg class="settings-button-icon">
+			<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#MENU_SETTINGS"></use>
+		</svg>
+	</button>
+	<div class="settings-box">
+		<span class="settings-box-title"></span>
+		<ul class="settings-box-list">
+			
+				<li class="settings-box-item settings-box-item-darkmode">
+					<button class="dark-mode-action">
+							Modo noturno
+					</button>
+				</li>
+			
+			
+				
+				
+				
+				
+					<li class="settings-box-item settings-box-item-player"><a class="settings-box-item-player--disabled" onclick="event.preventDefault();">Mudar o player</a></li>
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="https://cursos.alura.com.br/suggestions/new/react-parte-2/24451/opinion">Sugerir alteração</a></li>
+					
+				
+			
+			
+		</ul>
+	</div>
+</div>
+	</section>
+	
+				<div class="formattedText" data-external-links="">
+					<p>Esse é um passo fundamental no projeto. Confira se tudo está funcionando corretamente para minimizar problemas nas próximas atividades :).</p>
+
+				</div>
+			
+</section>
+		
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+			
+				
+
+
+
+
+	
+	
+		<section class="task-actions">
+			<div class="container">
+				
+
+
+
+
+    <a href="https://cursos.alura.com.br/forum/curso-react-parte-2/exercicio-mao-na-massa-implementando-a-versao-inicial-da-timeline-publica/24451/novo" class=" task-actions-button task-actions-button-forum">Discutir no Forum</a>
+
+				
+				
+				
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/24451/next" class="task-actions-button task-body-actions-button task-actions-button-next">Próxima Atividade</a>
+				
+			</div>
+		</section>
+	
+
+
+			
+		</main>
+	</section>
+	
+
+
+
+
+
+
+
+
+
+
+
+<button title="Abrir/Fechar menu" aria-label="Abrir/Fechar menu" type="button" class="openMenu-button task-body-button openMenu-button--inactive"></button>
+
+<aside class="task-menu" style="position: fixed; transform: translateY(0px);">
+	<section class="task-menu-header">
+		<button title="Abrir menu" aria-label="Abrir menu" type="button" class="openMenu-button task-menu-button openMenu-button--inactive"></button>
+		<div class="task-menu-header-info">
+			<a class="task-menu-header-info-title" href="https://cursos.alura.com.br/course/react-parte-2" title="Ir para página do curso">
+				
+					
+					
+						<img src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/react-parte-2.svg" alt="ícone React parte 2: Container components e o ciclo de vida do react" class="task-menu-header-info-title-icon " width="37.5px" height="37.5px">
+					
+				
+				<h2 class="task-menu-header-info-title-text">React parte 2: Container components e o ciclo de vida do react</h2>
+			</a>
+			
+				<div class="task-menu-header-info-progress">
+					
+					<span class="task-menu-header-info-progress-percentage ">45%</span>
+					<span class="task-menu-header-info-progress-bar" style="background-image: linear-gradient(to right, #9de482, #9de482 45%, transparent 45%);"></span>
+				</div>
+			
+		</div>
+	</section>
+	
+	<section class="task-menu-section">
+		<div class="task-menu-section-title">
+			<span class="task-menu-section-title-number ">Aula<strong>01</strong>
+				<span>de 05</span></span>
+			<h3 class="task-menu-section-title-text">
+				Implementação da primeira versão da timeline do instalura
+			</h3>
+		</div>
+	</section>
+	<nav class="task-menu-nav">
+		<h2 class="task-menu-nav-title">
+			Atividades
+			<span>9 de 9</span>
+		</h2>
+		<ul class="task-menu-nav-list">
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/24917" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">01</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="1- Introdução">
+							1- Introdução
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">07min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/24918" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">02</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="2- Importando o HTML">
+							2- Importando o HTML
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">17min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/24919" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">03</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="3- Achando os macro componentes da aplicação">
+							3- Achando os macro componentes da aplicação
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">07min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/24920" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#VIDEO"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">04</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="4- Dividindo ainda mais os componentes">
+							4- Dividindo ainda mais os componentes
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">09min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/22614" class="task-menu-nav-item-link task-menu-nav-item-link-SINGLE_CHOICE">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Atividade de Única Escolha concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#SINGLE_CHOICE"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">05</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Qual estratégia devemos usar para descobrir os componentes da tela?">
+							Qual estratégia devemos usar para descobrir os componentes da tela?
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/22613" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">06</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Configurando o ambiente para executar o projeto">
+							Configurando o ambiente para executar o projeto
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/22814" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">07</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Instalando o MySQL Ubuntu Linux e  Mac">
+							Instalando o MySQL Ubuntu Linux e  Mac
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/22812" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">08</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Instalação do MySQL no Windows">
+							Instalação do MySQL no Windows
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item task-menu-nav-item--selected">
+					<a href="https://cursos.alura.com.br/course/react-parte-2/task/24451" class="task-menu-nav-item-link task-menu-nav-item-link-TEXT_CONTENT">
+						<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Atividade sem Resposta do Aluno concluída">
+							
+								
+								<use xlink:href="/images/gnarus/classPage/icon-menu-icons.svg#TEXT_CONTENT"></use>
+							
+							
+						
+					</svg>
+					<span class="task-menu-nav-item-number">09</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Mão na massa: implementando a versão inicial da timeline pública">
+							Mão na massa: implementando a versão inicial da timeline pública
+						</span>
+						
+					</span></a>
+				</li>
+			
+			
+		</ul>
+	</nav>
+	<section class="task-menu-sections">
+		<h2 class="task-menu-sections-title">
+			Aulas
+		</h2>
+		<select class="task-menu-sections-select" onchange="location.href=&#39;/course/react-parte-2/section/&#39;+this.value;">
+			
+				<option value="1" selected="">01. Implementação da primeira versão da timeline do instalura</option>
+			
+				<option value="2">02. Deixando a timeline dinâmica, consumindo uma api com a fetch api</option>
+			
+				<option value="3">03. Lidando com a autenticação do usuário</option>
+			
+				<option value="4">04. Navegação entre os usuários e mais um pouco de router e ciclo de vida</option>
+			
+				<option value="5">05. Presentational e Container components</option>
+			
+		</select>
+	</section>
+	<section class="task-menu-others">
+		<h2 class="task-menu-others-title ">
+			Outros Links
+		</h2>
+		<a href="https://cursos.alura.com.br/forum/curso-react-parte-2/todos" class="task-menu-others-link task-menu-others-link-forum" title="Ir para o fórum do curso">Fórum</a>
+		<a href="https://cursos.alura.com.br/dashboard" class="task-menu-others-link task-menu-others-link-curso" title="Ir para a página principal">Trocar Curso</a>
+	</section>
+	<section class="task-menu-footer">
+		<a class="task-menu-footer-user" href="https://cursos.alura.com.br/user/farley-t-i" title="Ir para sua página de usuário">
+			<img src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/51d7f1edf7f5a1f566dba8cb5d0706ae.png" alt="Gravatar de Farley de Souza Rufino" class="task-menu-footer-img" width="40px" height="40px">
+			
+				<p class="task-menu-footer-detalhes">
+					<span class="task-menu-footer-detalhes-nome">Farley de Souza Rufino</span>
+					<span class="task-menu-footer-detalhes-xp">
+						40.2k xp
+					</span>
+				</p>
+			
+			<input type="hidden" value="">
+			<input type="hidden" value="">
+		</a>
+		<a href="https://cursos.alura.com.br/dashboard" class="task-menu-footer-logo">
+			<img src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/icon-menu-alura.svg" alt="Logo da Alura" class="task-menu-footer-logo-image" width="19px" height="32px" title="Ir para a página principal">
+		</a>
+	</section>
+</aside>
+
+</section><div class="full-screen__panel" style="display: none;">
+				<img id="full-screen__image" class="full-screen__image" src="https://cursos.alura.com.br/course/react-parte-2/task/24451" alt="">
+				<div class="full-screen__actions">
+				<button class="button buttonAction partitura-download">Anterior</button><button class="button buttonAction partitura-download">Sair</button><button class="button buttonAction partitura-download">Próximo</button></div> 
+			</div>
+
+
+
+
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/jquery-2.1.3.min.32015dd4.js.download"></script><script type="text/javascript" id="">function eventClick(d,a,b,c){a.includes(" \x3e ")&&(a=document.querySelector(a).textContent);b.includes(" \x3e ")&&(b=document.querySelector(b).textContent);(c=document.querySelector(c))&&c.addEventListener("click",function(){dataLayer.push({event:"gaEvent",eventCategory:d,eventAction:a,eventLabel:b})})}eventClick("Menu","Logo","","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e a");eventClick("Menu","Todos os Cursos","Abrir","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e div.header__nav__wrapper.header__nav__wrapper--menu \x3e div");
+eventClick("Menu","Todos os Cursos","Cursos de Mobile","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e ul \x3e li.header-cursos-lista-categoria.header-cursos-lista-categoria--mobile \x3e a");eventClick("Menu","Todos os Cursos","Cursos de Programa\u00e7\u00e3o","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e ul \x3e li.header-cursos-lista-categoria.header-cursos-lista-categoria--programacao \x3e a");eventClick("Menu","Todos os Cursos","Cursos de Front-end","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e ul \x3e li.header-cursos-lista-categoria.header-cursos-lista-categoria--front-end \x3e a");
+eventClick("Menu","Todos os Cursos","Cursos de Infraestrutura","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e ul \x3e li.header-cursos-lista-categoria.header-cursos-lista-categoria--infraestrutura \x3e a");eventClick("Menu","Todos os Cursos","Cursos de Design \x26 UX","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e ul \x3e li.header-cursos-lista-categoria.header-cursos-lista-categoria--design-ux \x3e a");eventClick("Menu","Todos os Cursos","Cursos de Business","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e ul \x3e li.header-cursos-lista-categoria.header-cursos-lista-categoria--business \x3e a");
+eventClick("Menu","Carreiras e Forma\u00e7\u00f5es","","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e div.header__nav__wrapper.header__nav__wrapper--menu \x3e a:nth-child(2)");eventClick("Menu","Como funciona","","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e div.header__nav__wrapper.header__nav__wrapper--menu \x3e a:nth-child(3)");eventClick("Menu","Para empresas","","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e div.header__nav__wrapper.header__nav__wrapper--menu \x3e a:nth-child(4)");
+eventClick("Menu","Entrar","","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e div.header__nav__wrapper.header__nav__wrapper--ctas \x3e a:nth-child(1)");eventClick("Menu","Matricule-se","","body \x3e div.home \x3e div \x3e header \x3e div \x3e nav \x3e div.header__nav__wrapper.header__nav__wrapper--ctas \x3e a.header__nav__link.header__nav__link--cta");eventClick("Menu","Busca","Abrir","body \x3e div.home \x3e div \x3e header \x3e section \x3e div:nth-child(2) \x3e a");
+eventClick("Menu","Busca","Buscar","body \x3e div.home \x3e div \x3e header \x3e section \x3e div:nth-child(1) \x3e form \x3e button");eventClick("Footer","Primeira Se\u00e7\u00e3o","Alura","body \x3e footer.footer \x3e div \x3e div.footer-info \x3e div.footer-logos \x3e a.footer-logos-home");eventClick("Footer","Primeira Se\u00e7\u00e3o","Caelum","body \x3e footer.footer \x3e div \x3e div.footer-info \x3e div.footer-logos \x3e a.footer-link-caelum");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Apostilas","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(1) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Planos","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(2) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Todos os Cursos","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(3) \x3e a");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Carreiras","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(4) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Instrutores","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(5) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Como virar Instrutor","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(6) \x3e a");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Ranking","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(7) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Blog da Alura","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(8) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Podcast Nerdtech","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(9) \x3e a");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Pol\u00edtica de Privacidade","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(10) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Termos de Uso","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(11) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Sobre N\u00f3s","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(12) \x3e a");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Perguntas Frequentes","body \x3e footer.footer \x3e div \x3e div.footer-navegue \x3e ul \x3e li:nth-child(13) \x3e a");eventClick("Footer","Primeira Se\u00e7\u00e3o","Youtube","body \x3e footer.footer \x3e div \x3e div.footer-column.footer-column-cards \x3e div.footer-card-hotLinks \x3e div.footer-card-hotLinks-info.footer-card-redes \x3e a:nth-child(1)");eventClick("Footer","Primeira Se\u00e7\u00e3o","Facebook","body \x3e footer.footer \x3e div \x3e div.footer-column.footer-column-cards \x3e div.footer-card-hotLinks \x3e div.footer-card-hotLinks-info.footer-card-redes \x3e a:nth-child(2)");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Twitter","body \x3e footer.footer \x3e div \x3e div.footer-column.footer-column-cards \x3e div.footer-card-hotLinks \x3e div.footer-card-hotLinks-info.footer-card-redes \x3e a:nth-child(3)");eventClick("Footer","Primeira Se\u00e7\u00e3o","Hipsters","body \x3e footer.footer \x3e div \x3e div.footer-column.footer-column-cards \x3e div.footer-card-hotLinks \x3e div.footer-card-hotLinks-info.footer-card-redes \x3e a:nth-child(4)");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Google Play","body \x3e footer.footer \x3e div \x3e div.footer-column.footer-column-cards \x3e div.footer-card-hotLinks \x3e div.footer-card-hotLinks-info.footer-card-mobile \x3e a:nth-child(1)");eventClick("Footer","Primeira Se\u00e7\u00e3o","App Store","body \x3e footer.footer \x3e div \x3e div.footer-column.footer-column-cards \x3e div.footer-card-hotLinks \x3e div.footer-card-hotLinks-info.footer-card-mobile \x3e a:nth-child(2)");
+eventClick("Footer","Primeira Se\u00e7\u00e3o","Fale Conosco","body \x3e footer.footer \x3e div \x3e div:nth-child(3) \x3e a.footer-card.footer-card-contato");eventClick("Footer","Primeira Se\u00e7\u00e3o","Empresa?","body \x3e footer.footer \x3e div \x3e div:nth-child(3) \x3e a.footer-card.footer-card-empresa");eventClick("Footer","Mobile","body \x3e nav \x3e div \x3e a:nth-child(2)","body \x3e nav \x3e div \x3e a:nth-child(2)");
+eventClick("Footer","Mobile","body \x3e nav \x3e div \x3e a:nth-child(3)","body \x3e nav \x3e div \x3e a:nth-child(3)");eventClick("Footer","Mobile","body \x3e nav \x3e div \x3e a:nth-child(4)","body \x3e nav \x3e div \x3e a:nth-child(4)");eventClick("Footer","Mobile","body \x3e nav \x3e div \x3e a:nth-child(5)","body \x3e nav \x3e div \x3e a:nth-child(5)");eventClick("Footer","Mobile","body \x3e nav \x3e div \x3e a:nth-child(6)","body \x3e nav \x3e div \x3e a:nth-child(6)");
+eventClick("Footer","Programa\u00e7\u00e3o","body \x3e nav \x3e div \x3e a:nth-child(8)","body \x3e nav \x3e div \x3e a:nth-child(8)");eventClick("Footer","Programa\u00e7\u00e3o","body \x3e nav \x3e div \x3e a:nth-child(9)","body \x3e nav \x3e div \x3e a:nth-child(9)");eventClick("Footer","Programa\u00e7\u00e3o","body \x3e nav \x3e div \x3e a:nth-child(10)","body \x3e nav \x3e div \x3e a:nth-child(10)");eventClick("Footer","Programa\u00e7\u00e3o","body \x3e nav \x3e div \x3e a:nth-child(11)","body \x3e nav \x3e div \x3e a:nth-child(11)");
+eventClick("Footer","Programa\u00e7\u00e3o","body \x3e nav \x3e div \x3e a:nth-child(12)","body \x3e nav \x3e div \x3e a:nth-child(12)");eventClick("Footer","Front-end","body \x3e nav \x3e div \x3e a:nth-child(14)","body \x3e nav \x3e div \x3e a:nth-child(14)");eventClick("Footer","Front-end","body \x3e nav \x3e div \x3e a:nth-child(15)","body \x3e nav \x3e div \x3e a:nth-child(15)");eventClick("Footer","Front-end","body \x3e nav \x3e div \x3e a:nth-child(16)","body \x3e nav \x3e div \x3e a:nth-child(16)");
+eventClick("Footer","Front-end","body \x3e nav \x3e div \x3e a:nth-child(17)","body \x3e nav \x3e div \x3e a:nth-child(17)");eventClick("Footer","Front-end","body \x3e nav \x3e div \x3e a:nth-child(18)","body \x3e nav \x3e div \x3e a:nth-child(18)");eventClick("Footer","Infraestrutura","body \x3e nav \x3e div \x3e a:nth-child(20)","body \x3e nav \x3e div \x3e a:nth-child(20)");eventClick("Footer","Infraestrutura","body \x3e nav \x3e div \x3e a:nth-child(21)","body \x3e nav \x3e div \x3e a:nth-child(21)");
+eventClick("Footer","Infraestrutura","body \x3e nav \x3e div \x3e a:nth-child(22)","body \x3e nav \x3e div \x3e a:nth-child(22)");eventClick("Footer","Infraestrutura","body \x3e nav \x3e div \x3e a:nth-child(23)","body \x3e nav \x3e div \x3e a:nth-child(23)");eventClick("Footer","Infraestrutura","body \x3e nav \x3e div \x3e a:nth-child(24)","body \x3e nav \x3e div \x3e a:nth-child(24)");eventClick("Footer","Design e UX","body \x3e nav \x3e div \x3e a:nth-child(26)","body \x3e nav \x3e div \x3e a:nth-child(26)");
+eventClick("Footer","Design e UX","body \x3e nav \x3e div \x3e a:nth-child(27)","body \x3e nav \x3e div \x3e a:nth-child(27)");eventClick("Footer","Design e UX","body \x3e nav \x3e div \x3e a:nth-child(28)","body \x3e nav \x3e div \x3e a:nth-child(28)");eventClick("Footer","Design e UX","body \x3e nav \x3e div \x3e a:nth-child(29)","body \x3e nav \x3e div \x3e a:nth-child(29)");eventClick("Footer","Design e UX","body \x3e nav \x3e div \x3e a:nth-child(30)","body \x3e nav \x3e div \x3e a:nth-child(30)");
+eventClick("Footer","Business","body \x3e nav \x3e div \x3e a:nth-child(32)","body \x3e nav \x3e div \x3e a:nth-child(32)");eventClick("Footer","Business","body \x3e nav \x3e div \x3e a:nth-child(33)","body \x3e nav \x3e div \x3e a:nth-child(33)");eventClick("Footer","Business","body \x3e nav \x3e div \x3e a:nth-child(34)","body \x3e nav \x3e div \x3e a:nth-child(34)");eventClick("Footer","Business","body \x3e nav \x3e div \x3e a:nth-child(35)","body \x3e nav \x3e div \x3e a:nth-child(35)");
+eventClick("Footer","Business","body \x3e nav \x3e div \x3e a:nth-child(36)","body \x3e nav \x3e div \x3e a:nth-child(36)");</script><script type="text/javascript" id="">elements=document.querySelectorAll("input, select");elements.forEach(function(b,c){b.addEventListener("change",function(a){a=this.getAttribute("name");dataLayer.push({event:"gaEvent",eventCategory:"Formul\u00e1rios",eventAction:"Altera\u00e7\u00e3o",eventLabel:a})})});</script>
+<script type="text/javascript" id="">var key="Think_Again45984$%";function log(a){console.log(a)}function getPars(){var a={};window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(b,c,d){a[c]=d});return a}function userId(a){a=sha256.hmac(key,a);dataLayer.push({event:"userId",userId:a})}var script=document.createElement("script");script.onload=function(){var a=getPars().e;a&&userId(a);a=document.querySelectorAll('[type\x3d"email"]');for(var b=0;b<a.length;b++)a[b].onchange=function(){userId(this.value)}};script.src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js";
+document.head.appendChild(script);</script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/buttonToggle.1c952a31.js.download" async=""></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/sectionMenu.9c6d35d8.js.download" async=""></script>
+
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/marked.min.a2851798.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/markdownEditor.4b03bd09.js.download" async=""></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/caret.df98f577.js.download" async=""></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/keydownWatchers.f20680cd.js.download" async=""></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/prettify.min.49a10a85.js.download" async=""></script>
+
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/preventsMultipleInteractions.ccefe158.js.download" async=""></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/assessment.050f656f.js.download" async=""></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/login-form.20124546.js.download" async=""></script>
+
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/menuSettings.586ae39e.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/ProjectSubmit.1da29f73.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/classPage.a7020be4.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/aria.1c51db86.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/phrase.dda08bd7.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/feedback.98f71e18.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/ExtraContentProgressRequest.8fae0e05.js.download"></script>
+	
+	
+
+	
+	
+	
+	
+
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/partitura.c5cff29c.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/audioProgress.71d14880.js.download"></script>
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/audioPlayer.9e2e5334.js.download"></script>
+
+		
+
+	
+		
+
+<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/customerio.ad52be65.js.download"></script>
+<script>
+    var tracker = new CustomerIO('fccd7e3d49531457b6b2');
+    tracker.identify('304783', 'farley.t.i@hotmail.com', '1556915262');
+</script>
+	
+
+	<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/darkMode.65d4b699.js.download">
+	</script>
+
+	
+		
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42101548-1', 'alura.com.br');
+  
+  
+  	ga('set', 'userId', '304783');
+  
+  
+  ga('require', 'displayfeatures');
+  
+  	ga('send', 'pageview');
+  
+  
+</script>
+	
+
+	<script>new DarkModeToggler().refreshListener()</script>
+
+
+
+
+<script src="./React parte 2_ Aula 1 - Atividade 9 Mão na massa_ implementando a versão inicial da timeline pública _ Alura - Cursos online de tecnologia_files/MarkdownProcessing.f83261d2.js.download"></script>
+<script>
+	new MarkdownProcessing("https://cursos.alura.com.br").onLoad();
+</script></body></html>
