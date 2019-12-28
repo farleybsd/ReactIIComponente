@@ -8,14 +8,13 @@ export default class Timeline extends Component {
       this.state = {fotos:[]};
     }
 
-    componentDidMount(){
-
+    carregaFotos(props){
       let urlPerfil
 
-      if(this.props.login === undefined){
+      if(props.login === undefined){
          urlPerfil = `http://localhost:8080/api/fotos?X-AUTH-TOKEN=${localStorage.getItem('auth-token')}`
       } else {
-        urlPerfil = `http://localhost:8080/api/public/fotos/${this.props.login}`
+        urlPerfil = `http://localhost:8080/api/public/fotos/${props.login}`
       }
       // fetch('http://localhost:8080/api/public/fotos/rafael')  
       fetch(urlPerfil)
@@ -25,6 +24,16 @@ export default class Timeline extends Component {
        });
     }
 
+    componentDidMount(){
+      this.carregaFotos(this.props);
+      
+    }
+    componentWillReceiveProps(nextProps){
+      if(nextProps.login !== undefined ){
+        this.carregaFotos(nextProps);
+      }
+
+    }
     render(){
         return (
         <div className="fotos container">
