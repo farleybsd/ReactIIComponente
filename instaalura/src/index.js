@@ -7,11 +7,14 @@ import App from './App';
 import Login from './componentes/Login'
 import Logout from './componentes/Logout'
 import {Router,Route,browserHistory} from 'react-router';
+import {matchPattern} from 'react-router/lib/PatternUtils';
 
 
 function verificaAutenticacao(nexState,replace){
 
-    if(localStorage.getItem('auth-token') === null){
+    const resultado = matchPattern('/timeline(/:login)',nexState.location.pathname)
+    const enderecoPrivadoTimeLine = resultado.paramValues[0] === undefined
+    if(enderecoPrivadoTimeLine && localStorage.getItem('auth-token') === null){
         replace('/?msg=Você precisa estar logado para acessar o endereco')
     }
 }
@@ -20,7 +23,8 @@ ReactDOM.render(
     (
     <Router history ={browserHistory}>
         <Route path="/" component={Login} />
-        <Route path="/timeline" component={App} onEnter ={ verificaAutenticacao}/>
+        <Route path="/timeline(/:login)" component={App} onEnter ={ verificaAutenticacao}/>
+        {/*<Route path="/timeline/:login" component={App} />*/}
         <Route path="/logout" component={Logout} />
     </Router>
     
