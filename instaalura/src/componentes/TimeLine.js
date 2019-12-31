@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import FotoItem from './Foto';
-
+import PubSub from 'pubsub-js'
 export default class Timeline extends Component {
 
     constructor(){
       super();
       this.state = {fotos:[]};
+    }
+
+    componentWillMount(){
+      PubSub.subscribe('timeline',(topico,fotos) =>{
+        //console.log(fotos)
+        this.setState({fotos})
+
+      })
+
     }
 
     carregaFotos(props){
